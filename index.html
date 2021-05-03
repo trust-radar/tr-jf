@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;a
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #8489a9;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #e6e6e6;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  height: 600px;
+}
+
+.footer {
+  background-color: #e6e6e6;
+  color: #000000;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+   font-weight: 500;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: 500px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #54304d;
+  font-size: 16px;
+  resize: none;
+  color: cornsilk;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #13147dd1;
+  margin-top: 100px;
+}
+
+.alert {
+ color: #f10b0b;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+form {
+  color: #6f6d3b;
+   font-weight: 500;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>JSON Formatter</h1>
+</div>
+
+<div class="row">
+  <!-- <div class="col-3 col-s-3 menu">
+    <ul>
+      <li>The Flight</li>
+      <li>The City</li>
+      <li>The Island</li>
+      <li>The Food</li>
+    </ul>
+  </div> -->
+
+  <div class="col-4 col-s-12">
+    <form>
+          INPUT: <textarea  id="input_json"></textarea>
+     </form>
+  </div>
+  <div class="col-1 col-s-12">
+   <button class="button" onclick="gfg_Run();">
+		Process
+	</button>
+	<div class="alert" id="alert">
+  </div>
+  </div>
+  <div class="col-5 col-s-12">
+    <form>
+          OUTPUT:<textarea id="output_json" ></textarea>
+     </form>
+  </div>
+
+  <div class="col-2 col-s-12">
+    <div class="aside">
+	  <a href="https://www.bluehost.com/track/swathibangera/jsonformatter" target="_blank"> <img border="0" src="https://bluehost-cdn.com/media/partner/images/swathibangera/160x600/160x600PW.png"> </a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+   <p>© 2021 -  2022</p>
+  <p> @Powered by <a href="https://trustedmate.com" target="_blank">Trusted Mate</a></p>
+</div>
+<script>
+		var input_json = document.getElementById("input_json");
+		var output_json = document.getElementById("output_json");
+		var alert = document.getElementById("alert");
+		
+		function gfg_Run() {
+		  try{
+		      alert.innerHTML = "";
+		      var obj= JSON.parse(input_json.value);
+			  output_json.innerHTML = JSON.stringify(obj, undefined, 4);
+			 }catch(e){
+			    alert.innerHTML = "Invalid JSON input ! " + e.message;
+			}
+		}
+		
+	</script>
+</body>
+</html>
