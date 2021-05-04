@@ -1,7 +1,242 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>JSON Formatter and Beautifier</title><meta name="author" content="Trusted Mate"><meta name="description" content="The JSON Formatter &amp; Validator beautifies the JSON data"><meta name="keywords" content="json format, json beautify, json validator"><link rel="apple-touch-icon" href="https://trustedmate.com/images/icon.png"><link rel="shortcut icon" href="https://trustedmate.com/images/icon.png"><link rel="canonical" href="https://jsonformatter.trustedmate.com/"><script type="application/ld+json">{
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Formatter and Beautifier</title>
+<meta name="author" content="Trusted Mate">
+<meta name="description" content="The JSON Formatter &amp; Validator beautifies the JSON data">
+<meta name="keywords" content="json format, json beautify, json validator">
+<link rel="apple-touch-icon" href="https://trustedmate.com/images/icon.png">
+<link rel="shortcut icon" href="https://trustedmate.com/images/icon.png">
+<link rel="canonical" href="https://jsonformatter.trustedmate.com/">
+<script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "WebSite",
         "name": "The JSON Formatter &amp; Validator beautifies the JSON data",
         "url": "https://jsonformatter.trustedmate.com/"
-        }</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-E7XLXPF198"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-E7XLXPF198");</script><style>*{box-sizing:border-box}.row::after{content:"";clear:both;a
-  display:table}[class*=col-]{float:left;padding:15px}html{font-family:"Lucida Sans",sans-serif}.header{background-color:#ff6749;color:#fff;padding:15px}.sub{margin-left:10px;font-size:larger;font-weight:500;color:#ab0303;background-color:#f99673;margin:0;padding:10px}.menu ul{list-style-type:none;margin:0;padding:0}.menu li{padding:8px;margin-bottom:7px;background-color:#33b5e5;color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)}.menu li:hover{background-color:#09c}.aside{background-color:#e6e6e6;padding:15px;color:#fff;text-align:center;font-size:14px;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);height:600px}.footer{background-color:#f5f5e8;color:#000;text-align:center;font-size:12px;padding:15px;font-weight:500}textarea{width:100%;height:500px;padding:12px 20px;box-sizing:border-box;border:2px solid #ccc;border-radius:10px;background-color:#efe5cddb;font-size:16px;resize:none;color:#2f2f24}.button{border:none;color:#fff;padding:15px 15px;text-align:center;text-decoration:none;display:inline-block;font-size:16px;margin:4px 2px;cursor:pointer;background-color:#e96546;margin-top:100px;border-radius:15px}.alert{color:#f10b0b;font-weight:500;margin-top:30px}form{color:#6f6d3b;font-weight:500}[class*=col-]{width:100%}@media only screen and (min-width:600px){.col-s-1{width:8.33%}.col-s-2{width:16.66%}.col-s-3{width:25%}.col-s-4{width:33.33%}.col-s-5{width:41.66%}.col-s-6{width:50%}.col-s-7{width:58.33%}.col-s-8{width:66.66%}.col-s-9{width:75%}.col-s-10{width:83.33%}.col-s-11{width:91.66%}.col-s-12{width:100%}}@media only screen and (min-width:768px){.col-1{width:8.33%}.col-2{width:16.66%}.col-3{width:25%}.col-4{width:33.33%}.col-5{width:41.66%}.col-6{width:50%}.col-7{width:58.33%}.col-8{width:66.66%}.col-9{width:75%}.col-10{width:83.33%}.col-11{width:91.66%}.col-12{width:100%}}</style></head><body><div class="header"><h1>JSON Formatter and Validator</h1></div><div class="row"><p class="sub">Free tool to format, validate and view json text</p><div class="col-4 col-s-12"><form>INPUT:<textarea placeholder="Enter json text here .." id="input_json"></textarea></form></div><div class="col-1 col-s-12"><button class="button" onclick="gfg_Run()">Process</button><div class="alert" id="alert"></div></div><div class="col-5 col-s-12"><form>OUTPUT:<textarea id="output_json"></textarea></form></div><div class="col-2 col-s-12"><div class="aside"><a href="https://www.bluehost.com/track/swathibangera/jsonformatter" target="_blank"><img border="0" src="https://bluehost-cdn.com/media/partner/images/swathibangera/160x600/160x600PW.png"></a></div></div></div><div class="footer"><p>© 2021 - 2022</p><p>@Powered by <a href="https://trustedmate.com" target="_blank">Trusted Mate</a></p></div><script>function gfg_Run(){try{alert.innerHTML="";var t=JSON.parse(input_json.value);output_json.innerHTML=JSON.stringify(t,void 0,4)}catch(n){alert.innerHTML="Invalid JSON input ! "+n.message}}var input_json=document.getElementById("input_json"),output_json=document.getElementById("output_json"),alert=document.getElementById("alert");</script></body></html>
+        }
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E7XLXPF198"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E7XLXPF198');
+</script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;a
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #ff6749;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.sub {
+	margin-left: 10px;
+    font-size: larger;
+    font-weight: 500;
+    color:  #ab0303;
+	background-color: #f99673;
+    margin: 0px;
+	padding: 10px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #e6e6e6;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  height: 600px;
+}
+
+.footer {
+  background-color: #f5f5e8;
+  color: #000000;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+   font-weight: 500;
+}
+
+textarea {
+  width: 100%;
+  height: 500px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #efe5cddb;
+  font-size: 16px;
+  resize: none;
+  color: #2f2f24;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #e96546;
+  margin-top: 100px;
+  border-radius: 15px;
+}
+
+.alert {
+ color: #f10b0b;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+form {
+  color: #6f6d3b;
+   font-weight: 500;
+}
+
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>JSON Formatter and Validator</h1>
+</div>
+
+<div class="row">
+  <!-- <div class="col-3 col-s-3 menu">
+    <ul>
+      <li>The Flight</li>
+      <li>The City</li>
+      <li>The Island</li>
+      <li>The Food</li>
+    </ul>
+  </div> -->
+<p class="sub">Free tool to format, validate and view json text</p>
+  <div class="col-4 col-s-12">
+  
+    <form>
+          INPUT: <textarea  placeholder="Enter json text here .." id="input_json"></textarea>
+     </form>
+  </div>
+  <div class="col-1 col-s-12">
+   <button class="button" onclick="gfg_Run();">
+		Process
+	</button>
+	<div class="alert" id="alert">
+  </div>
+  </div>
+  <div class="col-5 col-s-12">
+    <form>
+          OUTPUT:<textarea id="output_json" ></textarea>
+     </form>
+  </div>
+
+  <div class="col-2 col-s-12">
+    <div class="aside">
+	  <a href="https://www.bluehost.com/track/swathibangera/jsonformatter" target="_blank"> <img border="0" src="https://bluehost-cdn.com/media/partner/images/swathibangera/160x600/160x600PW.png" alt="Json formatter and validator - bluehost link image"> </a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+   <p>© 2021 -  2022</p>
+  <p> @Powered by <a href="https://trustedmate.com" target="_blank">Trusted Mate</a></p>
+</div>
+<script>
+		var input_json = document.getElementById("input_json");
+		var output_json = document.getElementById("output_json");
+		var alert = document.getElementById("alert");
+		
+		function gfg_Run() {
+		  try{
+		      alert.innerHTML = "";
+		      var obj= JSON.parse(input_json.value);
+			  output_json.innerHTML = JSON.stringify(obj, undefined, 4);
+			 }catch(e){
+			    alert.innerHTML = "Invalid JSON input ! " + e.message;
+			}
+		}
+		
+	</script>
+</body>
+</html>
